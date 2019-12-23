@@ -1,0 +1,301 @@
+.banner{
+	max-height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.banner::before{
+content: "";
+    background: #212121bf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+
+}
+.banner a img{
+    width: 60px;
+}
+.banner a{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    animation-name: arrowTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 2
+}
+
+@keyframes arrowTop{
+	0%{
+    	bottom: 30px;
+	}
+	 
+	100%{
+    	bottom: 50px;
+    }
+}
+
+
+.zoom{
+	animation-name: Zoom;
+	animation-direction: alternate;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+}
+
+@keyframes Zoom{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.5);
+	}
+}
+
+
+.effect{
+    position: relative;
+    overflow: hidden;
+}
+.effect::before{
+	content: "";
+	background: #212121bf;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.TopRight::after{
+	content: "";
+	right: 10px;
+	top: 0;
+	height: 0;
+	position: absolute;
+	border-right: 2px solid #fff;
+	z-index: 2;
+	transform: scaleY(0.96);
+	transition: all 0.3s ease-in-out;
+}
+.effect:hover .TopRight::after{
+	height: 100%;
+
+}
+.TopRight::before{
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: 0;
+	width:0;
+	z-index: 2;
+	border-top: 2px solid white;
+	transform: scaleX(0.96);
+	transition: all 0.3s ease-in-out;
+}
+.effect:hover .TopRight::before{ 
+	width: 100%;
+
+}
+
+.LeftBottom::after{
+	content: "";
+	position: absolute;
+	border-bottom: 2px solid #fff;
+	bottom: 10px;
+	left: 0;
+	width: 0;
+	z-index: 2;
+	transform: scaleX(0.96);
+	transition: all 0.3s ease-in-out;
+}
+.effect:hover .LeftBottom::after{ 
+	width: 100%;
+
+}
+.LeftBottom::before{
+	content: "";
+	position: absolute;
+	height: 0;
+	border-left: 2px solid #fff;
+	bottom: 0;
+	left: 10px;
+	z-index: 2;
+	transform: scaleY(0.96);
+	transition: all 0.3s ease-in-out;
+} 
+
+.effect:hover .LeftBottom::before{ 
+	height: 100%;
+
+}
+
+
+.effect h1{
+	    position: absolute;
+    bottom: 48%;
+    color: #fff;
+    z-index: 2;
+    font-size: 30px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.effect:hover h1{
+    bottom: 50%;
+    opacity: 1;
+
+
+}
+
+.badge{position: absolute;right: 10px;top: 20px;color: #000;z-index: 3;transform: rotate(45deg);}
+.badge::after{
+	content: "";
+	position: absolute;
+	width: 130px;
+	height: 30px;
+	background: #ffffff;
+	top: -5px;
+	right: -45px;
+	z-index: -1;
+	box-shadow: 0 0 10px #232323d9;
+}
+
+
+.road{
+	min-height: 230px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.road img{
+    width: 150px;
+    position: relative;
+}
+.road-img{
+	
+background-image: url(../images/1.jpg);
+	
+background-size: contain;
+	
+position: absolute;
+	
+left: 100%;
+	
+top: 0;
+	
+width: 100%;
+	
+height: 100%;
+	
+animation-name: Rasta;
+	
+animation-duration: 5s;
+	
+animation-iteration-count: infinite;
+	
+animation-fill-mode: forwards;
+animation-timing-function: ease;
+animation-play-state: all;
+animation-direction: alternate;
+	
+transform: scaleX(5);
+
+}
+
+@keyframes Rasta{
+	0%{
+	
+		left:100%;
+	}
+	100%{
+		left: -10%;
+	}
+}
+
+
+.code{
+    position: fixed;
+    top: 0; left:10%;
+    z-index: 5;
+    width: 50px;
+    animation-name: Code;
+    animation-direction: alternate;
+    animation-duration: 50s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Code {
+	0%{ 
+    	top: 0; left:10%;
+	}
+	10%{ 
+    	top: -10%; left:20%;
+    	transform: rotate(45deg);
+	}
+	20%{
+    	top: 0%; left:50%;
+    	transform: rotate(-45deg);
+	}
+	25%{
+    	top: -20%; left:60%;
+    	transform: rotate(45deg);
+	}
+	30%{
+
+    	top: 30%; left:70%;
+    	transform: rotate(45deg);
+	
+	}
+	40%{
+
+    	top: 40%; left:50%;
+    	transform: rotate(-45deg);
+	
+	}
+	50%{
+
+    	top: 50%; left:40%;
+    	transform: rotate(-105deg);
+	
+	}
+	60%{
+
+    	top: 30%; left:30%;
+    	transform: rotate(45deg);
+    }
+	70%{
+
+    	top: 50%; left:10%;
+    	transform: rotate(-45deg);
+    }
+	80%{
+
+    	top: 10%; left:40%;
+    	transform: rotate(60deg) scale(0.4);
+	
+	}
+	90%{
+
+    	top: 40%; left:30%;
+    	transform: rotate(-60deg) scale(0.9);
+	
+	}
+	100%{
+			top: 10%; left:10%;
+    	transform: rotate(90deg) scale(1);
+	} 
+}
